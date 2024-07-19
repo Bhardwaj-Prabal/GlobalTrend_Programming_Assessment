@@ -25,14 +25,14 @@ private:
             return 0;
         }
 
-        // Recursively call maxGain for left and right children
+      
         int leftGain = max(maxGain(node->left, maxSum), 0); 
         int rightGain = max(maxGain(node->right, maxSum), 0);
 
-        // Current path sum including the current node
+     
         int currentPathSum = node->val + leftGain + rightGain;
 
-        // Update maxSum if the current path sum is greater
+     
         maxSum = max(maxSum, currentPathSum);
 
         return node->val + max(leftGain, rightGain);
