@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <climits> // for INT_MIN, INT_MAX
+#include <climits> 
 
 using namespace std;
 
@@ -18,7 +18,7 @@ int maxDifference(vector<int>& nums) {
             minElement = nums[i];
         }
 
-        // Calculate current difference and update maxDiff
+      
         int currentDiff = nums[i] - minElement;
         if (currentDiff > maxDiff) {
             maxDiff = currentDiff;
