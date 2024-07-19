@@ -1,15 +1,14 @@
 #include <iostream>
-#include <cctype> // for std::isalpha
-
+#include <cctype> 
 using namespace std;
 
 bool containsOnlyAlphabetic(string str) {
     for (char c : str) {
         if (!isalpha(c)) {
-            return false; // Found a non-alphabetic character
+            return false; 
         }
     }
-    return true; // All characters are alphabetic
+    return true; 
 }
 
 int main() {
