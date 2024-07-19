@@ -7,14 +7,14 @@ using namespace std;
 int lengthOfLongestSubstring(string s) {
     unordered_map<char, int> charIndexMap;
     int maxLength = 0;
-    int start = 0;  // Start index of the current window
+    int start = 0;  
 
     for (int end = 0; end < s.length(); ++end) {
         char currentChar = s[end];
 
-        // If the character is already in the map and its index is within the current window
+        
         if (charIndexMap.find(currentChar) != charIndexMap.end() && charIndexMap[currentChar] >= start) {
-            start = charIndexMap[currentChar] + 1;  // Move the start to the right of the previous occurrence
+            start = charIndexMap[currentChar] + 1;  
         }
 
         charIndexMap[currentChar] = end;  
