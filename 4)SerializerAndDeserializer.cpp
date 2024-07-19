@@ -15,14 +15,14 @@ struct TreeNode {
 class Codec {
 public:
 
-    // Encodes a tree to a single string.
+    // Encodes 
     string serialize(TreeNode* root) {
         ostringstream out;
         serializeHelper(root, out);
         return out.str();
     }
 
-    // Decodes your encoded data to tree.
+    // Decodes 
     TreeNode* deserialize(string data) {
         istringstream in(data);
         return deserializeHelper(in);
