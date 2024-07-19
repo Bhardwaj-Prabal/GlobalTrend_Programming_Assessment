@@ -24,13 +24,13 @@ ListNode* reverseList(ListNode* head) {
     ListNode* next = NULL;
 
     while (current != NULL) {
-        next = current->next;  // Store the next node
-        current->next = prev;  // Reverse the current node's pointer
-        prev = current;        // Move pointers one position ahead
+        next = current->next;  
+        current->next = prev;  
+        prev = current;        // Move pointers 
         current = next;
     }
 
-    return prev;  // New head is the previous node
+    return prev; 
 }
 
 void PrintLinkedList(ListNode* head) {
@@ -43,11 +43,11 @@ void PrintLinkedList(ListNode* head) {
 }
 
 int main() {
-    // Create the head node
+    
     ListNode *head = new ListNode(1);
     ListNode *current = head;
 
-    // Create the rest of the nodes
+   
     for (int i = 2; i <= 10; ++i) {
         current->next = new ListNode(i);
         current = current->next;
